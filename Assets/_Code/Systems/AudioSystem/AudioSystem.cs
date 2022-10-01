@@ -1,0 +1,100 @@
+using UnityEngine;
+using System;
+using System.Collections.Generic;
+
+//System for managing all music and sounds in game
+public class AudioSystem : StaticInstance<AudioSystem>
+{
+    public bool playOnStart = true;
+    public Sound themeMusic;
+    public Sound[] sounds;
+
+    [SerializeField]
+    [Range(0f, 1f)]
+    float volume = 0.5f;
+    public float Volume => volume;
+
+    AudioSource musicSource;
+
+    List<AudioSource> sources = new List<AudioSource>();
+
+    private void Start()
+    {
+        musicSource = GetComponent<AudioSource>();
+        musicSource.clip = themeMusic.clip;
+        musicSource.volume = volume;
+
+        if (!musicSource.isPlaying && playOnStart) musicSource.Play();
+
+        foreach (Sound sound in sounds)
+        {
+            AddSouce(sound);
+        }
+    }
+
+    //Adding AudioSource with Sound prefs to AudioSystem
+    void AddSouce(Sound s)
+    {
+        s.source = gameObject.AddComponent<AudioSource>();
+        s.source.clip = s.clip;
+
+        s.source.volume = volume;
+        s.source.pitch = s.pitch;
+        s.source.loop = s.loop;
+
+        sources.Add(s.source);
+    }
+
+    //Turn on/off music
+    public void MusicSwitch(bool isPlay)
+    {
+        if (isPlay) musicSource.Play();
+        else musicSource.Stop();
+    }
+
+    //Turn on/off sounds
+    public void SoundSwitch(bool isPlay)
+    {
+        foreach (Sound sound in sounds)
+        {
+            if (isPlay) sound.source.Play();
+            else sound.source.Stop();
+        }
+    }
+
+    //Change volume on all AudioSources (Music and Sounds)
+    public void VolumeChange(float newVolume)
+    {
+        volume = newVolume;
+
+        musicSource.volume = volume;
+        /*
+        foreach (AudioSource source in sources)
+        {
+            source.volume = volume;
+        }
+        */
+    }
+
+    public void PlaySound(string name)
+    {
+        Sound soundToPlay = FindSound(name);
+        if (soundToPlay == null) return;
+        PlaySound(soundToPlay);
+    }
+
+    public void PlaySound(Sound name) => name.source.Play();
+
+    public void StopSound(string name)
+    {
+        Sound soundToStop = FindSound(name);
+        if (soundToStop == null) return;
+        soundToStop.source.Stop();
+    }
+
+    Sound FindSound(string name)
+    {
+        Sound lookingSound = Array.Find(sounds, sound => sound.name == name);
+        return lookingSound;
+    }
+}
