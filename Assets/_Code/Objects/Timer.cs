@@ -3,47 +3,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private Image uiFill;
-    [SerializeField] public Text uiText;
+    public Image uiFill;
+    public TMP_Text uiText;
 
-    public int _duration;
+    public Color badColor;
+    public Color goodColor;
 
-    private int remaingDuration;
+    public int timerTime;
 
-    private void Start()
+    public void SetTime(int time)
     {
-        Being(_duration);
+        if (time == 10) Reset();
+        uiText.text = time.ToString();
+        uiFill.fillAmount = (float)time/10;
+        if (time == 0) ZeroTime();
     }
 
-    private void Being(int Second)
+    public void Reset()
     {
-        remaingDuration = Second;
-        StartCoroutine(UpdateTimer());
+        uiFill.color = Color.white;
     }
 
-    private void Update()
+    public void ZeroTime()
     {
-        uiFill.fillAmount -= Time.deltaTime;
-        if (uiFill.fillAmount == 0) { uiFill.fillAmount = 1; }
-    }
-
-    private IEnumerator UpdateTimer()
-    {
-        while (remaingDuration>=0)
-        {
-            uiText.text = $"{remaingDuration}";
-          
-            remaingDuration--;
-            yield return new WaitForSeconds(1f);
-        }
-        OnEnd();
-    }
-
-    private void OnEnd()
-    {
-        print("End");
+        Debug.Log("Zero time");
+        bool good = SlotManager.Instance.IsAllGood();
+        uiFill.fillAmount = 1;
+        if (good) uiFill.color = goodColor;
+        else uiFill.color = badColor;
     }
 }
