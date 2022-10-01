@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class BattleCard : MonoBehaviour
 {
-    public CardSuit suit;
-    public SlotSuit[] suitSlots;
+    public SlotSuit[] suits;
     // Start is called before the first frame update
     void Start()
     {
