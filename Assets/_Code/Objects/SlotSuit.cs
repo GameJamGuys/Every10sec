@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class SlotSuit : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public CardSuit suit;
+
+    public GameObject[] allSuits;
+
+    private void Start()
     {
-        
+       // SetSuit(suit);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetSuit(CardSuit suit)
     {
-        
+        transform.DeactiveChildren();
+
+        allSuits[((int)suit)].SetActive(true);
     }
 }

@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Kerioth.Stuff;
 
 public class SlotWheel : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public CardSuit slotSuit;
+    SlotSuit slot;
+
     void Start()
     {
-        
+        slot = GetComponentInChildren<SlotSuit>();
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetSuit(CardSuit suit)
     {
-        
+        slot.SetSuit(suit);
+        slotSuit = suit;
     }
+    
+
 }

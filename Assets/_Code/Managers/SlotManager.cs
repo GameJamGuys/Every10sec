@@ -4,23 +4,33 @@ using UnityEngine;
 
 public class SlotManager : StaticInstance<SlotManager>
 {
-    public CardSuit[] slotSuits;
+    public List<CardSuit> slotSuits;
+    public SlotWheel[] slots;
 
     void Start()
     {
-       
+        SetSlots();
     }
 
     void Update()
     {
         
     }
+
+    public void SetSlots()
+    {
+        foreach(CardSuit suit in slotSuits)
+        {
+            int index = slotSuits.IndexOf(suit);
+            slots[index].SetSuit(suit);
+        }
+    }
 }
 
 public enum CardSuit
 {
-    Diamond,
-    Heart,
-    Club,
-    Spade
+    Diamond = 0,
+    Heart = 1,
+    Club = 2,
+    Spade = 3
 }
