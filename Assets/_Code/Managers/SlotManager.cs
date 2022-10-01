@@ -29,7 +29,7 @@ public class SlotManager : StaticInstance<SlotManager>
         }
     }
 
-    public bool AllGood()
+    public bool IsAllGood()
     {
         return conditions == 0;
     }
