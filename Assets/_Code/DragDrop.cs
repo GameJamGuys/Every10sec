@@ -1,48 +1,62 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class DragDrop : MonoBehaviour
+public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
-    private Camera _cam;
-    protected Vector2 _originalPositon;
-    protected bool _dragging;
-    [SerializeField] private GameObject _dropArea;
-    [SerializeField] private GameObject _handArea;
+    [SerializeField] private Canvas canvas;
 
-    private void Awake()
-    {
-        _originalPositon = _handArea.transform.position;
-        _cam = Camera.main;
-    }
-
-    private void OnMouseDrag()
-    {
-        transform.position = GetMousePos();
-        _dragging = true;
-    }
-
-    private void OnMouseUp()
-    {
-        if (Vector2.Distance(transform.position, _dropArea.transform.position) < 2)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            transform.position = _originalPositon;
-            _dragging = false;
-        }
-    }
-
-
-    Vector3 GetMousePos()
-    {
-        var mousePos = _cam.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0;
-        return mousePos;
-    }
+    private RectTransform rectTransform;
+    private CanvasGroup canvasGroup;
+    private Vector2 originalPos;
 
     
 
+    public void Awake()
+    {
+        rectTransform = GetComponent<RectTransform>();
+        
+        canvasGroup = GetComponent<CanvasGroup>();
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        Debug.Log("On Begin Drag");
+        originalPos = rectTransform.anchoredPosition;
+        canvasGroup.alpha = .6f;
+        canvasGroup.blocksRaycasts = false;
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        canvasGroup.alpha = 1f;
+        canvasGroup.blocksRaycasts = true;
+
+        if (eventData.pointerDrag != null)
+        {
+            rectTransform.anchoredPosition = originalPos;
+        }
+
+    }
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        Debug.Log("On Pointer");
+    }
+
+    public void OnDrop(PointerEventData eventData)
+    {
+        
+    }
+
+    public void DeleteCard()
+    {
+        Destroy(gameObject);
+    }
 }

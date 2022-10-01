@@ -240,8 +240,8 @@ GameObject:
   - component: {fileID: 890793864703112802}
   - component: {fileID: 2327667870207579456}
   - component: {fileID: 3153825072838822122}
-  - component: {fileID: -1639089162405133636}
   - component: {fileID: 4588038387258784578}
+  - component: {fileID: -4533385961317201253}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -327,32 +327,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!61 &-1639089162405133636
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7110159784880348058}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 110, y: 140}
-  m_EdgeRadius: 0
 --- !u!114 &4588038387258784578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,8 +339,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d3f91fa3d70724abea73e08454a784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dropArea: {fileID: 2759467301383460054, guid: 12d3bd15587b02548b5770f6fc531392, type: 3}
-  _handArea: {fileID: 8328061360935936471, guid: b740eb7dada360346802418e97ede903, type: 3}
+  canvas: {fileID: 0}
+--- !u!225 &-4533385961317201253
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7110159784880348058}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7446085948779387590
 GameObject:
   m_ObjectHideFlags: 0
