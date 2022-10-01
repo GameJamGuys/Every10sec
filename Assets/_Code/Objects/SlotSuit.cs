@@ -16,7 +16,7 @@ public class SlotSuit : MonoBehaviour
     public void SetSuit(CardSuit suit)
     {
         transform.DeactiveChildren();
-
+        this.suit = suit;
         allSuits[((int)suit)].SetActive(true);
     }
 }

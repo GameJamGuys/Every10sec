@@ -19,7 +19,7 @@ public class HealthBar : MonoBehaviour
         float newAmount = Mathf.Clamp(setAmount, 0, maxHealth);
 
         float newFillAmount = newAmount / maxHealth;
-        Debug.Log(newFillAmount);
+        //Debug.Log(newFillAmount);
         fillImage.fillAmount = newFillAmount;
     }
 

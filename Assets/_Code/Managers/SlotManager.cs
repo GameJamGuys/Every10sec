@@ -5,16 +5,33 @@ using UnityEngine;
 public class SlotManager : StaticInstance<SlotManager>
 {
     public List<CardSuit> slotSuits;
+    List<CardSuit> tempSuits;
+
     public SlotWheel[] slots;
+
+    public int conditions;
 
     void Start()
     {
         SetSlots();
     }
 
-    void Update()
+    public void CheckSuit(CardSuit suit)
     {
-        
+        foreach(CardSuit temp in tempSuits)
+        {
+            if(temp == suit)
+            {
+                tempSuits.Remove(temp);
+                conditions--;
+                return;
+            }
+        }
+    }
+
+    public bool AllGood()
+    {
+        return conditions == 0;
     }
 
     public void SetSlots()
@@ -24,6 +41,8 @@ public class SlotManager : StaticInstance<SlotManager>
             int index = slotSuits.IndexOf(suit);
             slots[index].SetSuit(suit);
         }
+        tempSuits = slotSuits;
+        conditions = 3;
     }
 }
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BaseSkill : MonoBehaviour
 {
+    public SkillType skillType;
+
     private void Start()
     {
         transform.DeactiveChildren();

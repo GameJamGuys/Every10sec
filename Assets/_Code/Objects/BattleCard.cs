@@ -6,15 +6,32 @@ public class BattleCard : MonoBehaviour
 {
     public CardSuit suit;
     public SlotSuit[] suitSlots;
+    public CardSkill cardSkill;
     // Start is called before the first frame update
     void Start()
     {
+        SetRandomSuit();
+        RandomSet();
+    }
+
+    public void RandomSet()
+    {
+        cardSkill.RandomSkill();
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetRandomSuit()
     {
-        
+        int random = Random.Range(0, 4);
+        suit = (CardSuit)random;
+        SetSuit();
+    }
+
+    void SetSuit()
+    {
+        foreach(SlotSuit slotSuit in suitSlots)
+        {
+            slotSuit.SetSuit(suit);
+        }
     }
 }
