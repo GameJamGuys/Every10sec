@@ -19,7 +19,6 @@ public class BossLogic : StaticInstance<BossLogic>
     public void Attack()
     {
         int attackType = Random.Range(1, 4);
-        Debug.Log($"Attack type {attackType}");
         switch (attackType)
         {
             case 1:

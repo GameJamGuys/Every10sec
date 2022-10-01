@@ -26,13 +26,17 @@ public class TimeManager : MonoBehaviour
             timerTime--;
             timer.SetTime(timerTime);
         }
-
-        yield return new WaitForSeconds(1f);
         TimeOut();
+        yield return new WaitForSeconds(1f);
+        Restart();
     }
+    void Restart() => StartCoroutine(LaunchTimer());
 
     void TimeOut()
     {
-        StartCoroutine(LaunchTimer());
+        BattleManager.Instance.TryAttack();
+        SlotManager.Instance.ResetSlots();
     }
+
+    
 }

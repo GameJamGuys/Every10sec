@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BattleManager : StaticInstance<BattleManager>
 {
+    //public 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +17,13 @@ public class BattleManager : StaticInstance<BattleManager>
     {
         
     }
+
+    public void TryAttack()
+    {
+        if (SlotManager.Instance.IsAllGood()) return;
+
+        BossLogic.Instance.Attack();
+    }
+
+
 }

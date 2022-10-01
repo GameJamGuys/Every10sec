@@ -19,10 +19,11 @@ public class PlayerManager : StaticInstance<PlayerManager>
         Player.mana = Player.maxMp = playerMP;
         Player.stamina = Player.maxSp = playerSP;
 
+
+        healthBar.maxHealth = playerHP;
         healthBar.Set(playerHP);
         manaBar.Set(playerMP);
         staminaBar.Set(playerSP);
-
     }
 
     void Update()

@@ -9,10 +9,6 @@ public class HealthBar : MonoBehaviour
 
     public Image fillImage;
     // Start is called before the first frame update
-    void Start()
-    {
-        maxHealth = PlayerManager.Instance.playerHP;
-    }
 
     public void Set(int setAmount)
     {

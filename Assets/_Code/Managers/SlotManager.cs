@@ -16,6 +16,19 @@ public class SlotManager : StaticInstance<SlotManager>
         SetSlots();
     }
 
+    public void ResetSlots()
+    {
+        slotSuits.RemoveRange(0,3);
+        for (int i = 0; i < 3; i++)
+        {
+            int random = Random.Range(0, 4);
+            CardSuit newSuit = (CardSuit)random;
+            slotSuits.Add(newSuit);
+        }
+
+        SetSlots();
+    }
+
     public void CheckSuit(CardSuit suit)
     {
         foreach(CardSuit temp in tempSuits)
