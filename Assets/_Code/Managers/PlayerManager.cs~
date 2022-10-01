@@ -1,0 +1,29 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerManager : MonoBehaviour
+{
+    public int playerHP;
+    public int playerMP;
+    public int playerSP;
+
+    void Start()
+    {
+        Player.health = playerHP;
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
+
+public static class Player
+{
+    public static int health;
+    public static int mana;
+    public static int stamina;
+}
