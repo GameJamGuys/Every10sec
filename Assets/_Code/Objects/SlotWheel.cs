@@ -11,11 +11,11 @@ public class SlotWheel : MonoBehaviour
     void Start()
     {
         slot = GetComponentInChildren<SlotSuit>();
-
     }
 
     public void SetSuit(CardSuit suit)
     {
+        slot = GetComponentInChildren<SlotSuit>();
         slot.SetSuit(suit);
         slotSuit = suit;
     }

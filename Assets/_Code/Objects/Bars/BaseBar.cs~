@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BaseBar : MonoBehaviour
+{
+    public GameObject popPrefab;
+
+    public int amount;
+    GameObject[] pops;
+
+    void Start()
+    {
+        SetAmount(amount);
+    }
+
+    void Update()
+    {
+        
+    }
+
+    public void Add(int amount) => SetAmount(amount);
+    public void Cost(int amount) => SetAmount(-amount);
+
+    void SetAmount(int setAmount)
+    {
+        amount = setAmount;
+
+        
+    }
+}
