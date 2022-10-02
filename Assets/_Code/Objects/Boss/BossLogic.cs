@@ -17,6 +17,7 @@ public class BossLogic : StaticInstance<BossLogic>
 
     public void PlayerAttack(int amount)
     {
+        if (PlayerLogic.Instance.curse) amount = amount / 2;
         bossHealth = Mathf.Clamp(bossHealth - amount, 0, health.maxHealth);
         ChangeHP(bossHealth);
     }

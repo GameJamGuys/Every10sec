@@ -2259,6 +2259,7 @@ MonoBehaviour:
   shieldCount: 0
   lCut: {fileID: 966705948}
   rCut: {fileID: 465018572}
+  curse: 0
 --- !u!1 &945289885
 GameObject:
   m_ObjectHideFlags: 0

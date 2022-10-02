@@ -13,16 +13,29 @@ public class PlayerLogic : StaticInstance<PlayerLogic>
 
     int bossPower;
 
+    public bool curse;
+
     void Start()
     {
         bossPower = BossLogic.Instance.bossAttack;
         shield.SetActive(false);
+        curse = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void SetCurse()
+    {
+        curse = true;
+    }
+
+    public void RemoveCurse()
+    {
+        curse = false;
     }
 
     public void ShieldUp()
@@ -48,6 +61,7 @@ public class PlayerLogic : StaticInstance<PlayerLogic>
 
     public void RecieveAttack(BossAttackType type)
     {
+        if (curse) RemoveCurse();
         if(shieldCount > 0)
         {
             Debug.Log("Shield used");
