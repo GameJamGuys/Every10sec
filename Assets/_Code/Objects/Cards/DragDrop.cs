@@ -11,11 +11,12 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     private Vector2 originalPos;
-
+    private RectTransform cardRect;
     
 
     public void Awake()
     {
+        cardRect = GetComponent<RectTransform>();
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
     }
@@ -28,8 +29,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void OnBeginDrag(PointerEventData eventData)
     {
         //Debug.Log("On Begin Drag");
+        rectTransform.transform.localScale += new Vector3(0.2f, 0.2f, 0);
         originalPos = rectTransform.anchoredPosition;
-        canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false;
     }
 
@@ -40,7 +41,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        canvasGroup.alpha = 1f;
+        rectTransform.transform.localScale += new Vector3(-0.2f, -0.2f, 0);
         canvasGroup.blocksRaycasts = true;
 
         if (eventData.pointerDrag != null)
