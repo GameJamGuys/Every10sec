@@ -18,9 +18,10 @@ public class SlotManager : StaticInstance<SlotManager>
 
     public void ResetSlots()
     {
+        slotSuits = new List<CardSuit>();
+        
         for (int i = 0; i < 3; i++)
         {
-            slotSuits.RemoveAt(0);
             int random = Random.Range(0, 4);
             CardSuit newSuit = (CardSuit)random;
             slotSuits.Add(newSuit);
@@ -46,7 +47,6 @@ public class SlotManager : StaticInstance<SlotManager>
                         return;
                     }
                 }
-
                 return;
             }
         }
