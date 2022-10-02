@@ -54,6 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotSuit: 0
+  disColor: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 0.9137255}
 --- !u!222 &8772853638643894145
 CanvasRenderer:
   m_ObjectHideFlags: 0

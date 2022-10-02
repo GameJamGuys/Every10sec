@@ -18,7 +18,11 @@ public class BattleManager : StaticInstance<BattleManager>
 
     public void BossTryAttack()
     {
-        if (SlotManager.Instance.IsAllGood()) return;
+        if (SlotManager.Instance.IsAllGood())
+        {
+            Debug.Log("Conditions complete");
+            return;
+        }
 
         BossLogic.Instance.Attack();
     }

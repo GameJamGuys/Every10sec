@@ -1277,7 +1277,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &945289886
 Transform:
   m_ObjectHideFlags: 0
@@ -1607,7 +1607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b773a04383c4eab9f2bb336a7b2e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotSuits: 000000000300000001000000
+  slotSuits: 010000000300000001000000
   slots:
   - {fileID: 1641661336}
   - {fileID: 2011398206}

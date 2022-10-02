@@ -18,13 +18,14 @@ public class SlotManager : StaticInstance<SlotManager>
 
     public void ResetSlots()
     {
-        slotSuits.RemoveRange(0,3);
         for (int i = 0; i < 3; i++)
         {
+            slotSuits.RemoveAt(0);
             int random = Random.Range(0, 4);
             CardSuit newSuit = (CardSuit)random;
             slotSuits.Add(newSuit);
         }
+
 
         SetSlots();
     }
@@ -37,6 +38,16 @@ public class SlotManager : StaticInstance<SlotManager>
             {
                 tempSuits.Remove(temp);
                 conditions--;
+
+                foreach(SlotWheel slot in slots)
+                {
+                    if(slot.slotSuit == suit)
+                    {
+                        slot.Deactive();
+                        return;
+                    }
+                }
+
                 return;
             }
         }
