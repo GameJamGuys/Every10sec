@@ -53,7 +53,7 @@ public class PlayerManager : StaticInstance<PlayerManager>
                     playerHP = Player.maxHp;
                 Player.health = playerHP;
                 healthBar.Set(playerHP);
-                Debug.Log($"Player health {playerHP}");
+                //Debug.Log($"Player health {playerHP}");
                 break;
             case StatType.Mana:
                 playerMP += amount;
@@ -61,7 +61,7 @@ public class PlayerManager : StaticInstance<PlayerManager>
                     playerMP = Player.maxMp;
                 Player.mana = playerMP;
                 manaBar.Set(playerMP);
-                Debug.Log($"Player mana {playerMP}");
+                //Debug.Log($"Player mana {playerMP}");
                 break;
             case StatType.Stamina:
                 playerSP += amount;
@@ -69,7 +69,7 @@ public class PlayerManager : StaticInstance<PlayerManager>
                     playerMP = Player.maxSp;
                 Player.stamina = playerSP;
                 staminaBar.Set(playerSP);
-                Debug.Log($"Player stamina {playerSP}");
+                //Debug.Log($"Player stamina {playerSP}");
                 break;
         }
     }
