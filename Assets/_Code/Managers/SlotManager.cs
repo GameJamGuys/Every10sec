@@ -49,14 +49,21 @@ public class SlotManager : StaticInstance<SlotManager>
 
     public void SetSlots()
     {
-        foreach(CardSuit suit in slotSuits)
+        StartCoroutine(SetDelay());
+    }
+
+    IEnumerator SetDelay()
+    {
+        foreach (CardSuit suit in slotSuits)
         {
             int index = slotSuits.IndexOf(suit);
             slots[index].SetSuit(suit);
+            yield return new WaitForSeconds(0.1f);
         }
         tempSuits = slotSuits;
         conditions = 3;
     }
+
 }
 
 public enum CardSuit

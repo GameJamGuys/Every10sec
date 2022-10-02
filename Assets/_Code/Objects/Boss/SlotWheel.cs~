@@ -10,17 +10,13 @@ public class SlotWheel : MonoBehaviour
 
     void Start()
     {
+        slot = GetComponentInChildren<SlotSuit>();
         anim = GetComponent<Animator>();
     }
 
-    public void SetSuit(CardSuit suit) => StartCoroutine(WaitAndSet(suit));
-
-    IEnumerator WaitAndSet(CardSuit suit)
+    public void SetSuit(CardSuit suit)
     {
-        anim.SetTrigger("Roll");
         slot = GetComponentInChildren<SlotSuit>();
-        yield return new WaitForSeconds(0.25f);
-        Debug.Log($"Set {suit}");
         slot.SetSuit(suit);
         slotSuit = suit;
     }

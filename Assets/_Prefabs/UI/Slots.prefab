@@ -340,18 +340,6 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 389545035267023812, guid: dd3e33f02910d4965bb29cd182db6085, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 389545035267023812, guid: dd3e33f02910d4965bb29cd182db6085, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 389545035267023812, guid: dd3e33f02910d4965bb29cd182db6085, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 389545035267023812, guid: dd3e33f02910d4965bb29cd182db6085, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -399,25 +387,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 389545035267023812, guid: dd3e33f02910d4965bb29cd182db6085, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6938441273183729697, guid: dd3e33f02910d4965bb29cd182db6085, type: 3}
       propertyPath: m_Name
       value: SlotWheel (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7460489612458942832, guid: dd3e33f02910d4965bb29cd182db6085, type: 3}
-      propertyPath: m_Color.b
-      value: 0.8301887
-      objectReference: {fileID: 0}
-    - target: {fileID: 7460489612458942832, guid: dd3e33f02910d4965bb29cd182db6085, type: 3}
-      propertyPath: m_Color.g
-      value: 0.8301887
-      objectReference: {fileID: 0}
-    - target: {fileID: 7460489612458942832, guid: dd3e33f02910d4965bb29cd182db6085, type: 3}
-      propertyPath: m_Color.r
-      value: 0.8301887
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd3e33f02910d4965bb29cd182db6085, type: 3}
