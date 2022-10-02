@@ -3021,7 +3021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2070a177c0934f898630c46466518ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHP: 150
+  playerHP: 200
   playerMP: 5
   playerSP: 5
   healthBar: {fileID: 1167478101}

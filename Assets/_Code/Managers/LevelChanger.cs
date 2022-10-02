@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Kerioth.Stuff;
 
 public class LevelChanger : StaticInstance<LevelChanger>
 {
@@ -10,6 +11,8 @@ public class LevelChanger : StaticInstance<LevelChanger>
     {
         anim = transform.GetComponent<Animator>();
     }
+
+    public void Restart() => Loader.Reload();
 
     public void FadeToLevel(int levelIndex)
     {
