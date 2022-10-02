@@ -341,7 +341,6 @@ GameObject:
   - component: {fileID: 149355721}
   - component: {fileID: 149355720}
   - component: {fileID: 149355719}
-  - component: {fileID: 149355722}
   m_Layer: 0
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -414,7 +413,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 149355722}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SplineHand, Assembly-CSharp
         m_MethodName: cardDragging
         m_Mode: 1
@@ -464,20 +463,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149355716}
   m_CullTransparentMesh: 1
---- !u!114 &149355722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149355716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbc7af31e45060a4aae335eaf8f3f19b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardPrefab: {fileID: 7110159784880348058, guid: 2ad15237690f54c59b078288c8f9aa4f, type: 3}
-  hand: {fileID: 1552180}
 --- !u!1 &322043685
 GameObject:
   m_ObjectHideFlags: 0
