@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class BattleManager : StaticInstance<BattleManager>
 {
-    public int bossHealth; 
 
     // Start is called before the first frame update
     void Start()
     {
-        BossLogic.Instance.health.maxHealth = bossHealth;
+        
     }
 
     // Update is called once per frame
@@ -18,11 +17,7 @@ public class BattleManager : StaticInstance<BattleManager>
         
     }
 
-    public void PlayerAttack(int amount)
-    {
-        bossHealth = Mathf.Clamp(bossHealth - amount, 0, BossLogic.Instance.health.maxHealth);
-        BossLogic.Instance.ChangeHP(bossHealth);
-    }
+    public void PlayerAttack(int amount) => BossLogic.Instance.PlayerAttack(amount);
 
     public void BossTryAttack()
     {
