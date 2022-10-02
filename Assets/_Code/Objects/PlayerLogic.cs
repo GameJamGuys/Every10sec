@@ -55,16 +55,16 @@ public class PlayerLogic : StaticInstance<PlayerLogic>
         {
             case BossAttackType.Left:
                 PlayerManager.Instance.AddHp(-bossPower);
-                Blink(lCut);
+                StartCoroutine(Blink(lCut));
                 break;
             case BossAttackType.Right:
                 PlayerManager.Instance.AddHp(-bossPower);
-                Blink(rCut);
+                StartCoroutine(Blink(rCut));
                 break;
             case BossAttackType.Both:
                 PlayerManager.Instance.AddHp(-bossPower * 2);
-                Blink(lCut);
-                Blink(rCut);
+                StartCoroutine(Blink(lCut));
+                StartCoroutine(Blink(rCut));
                 break;
         }
     }
