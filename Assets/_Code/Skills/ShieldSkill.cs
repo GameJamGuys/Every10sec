@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class ShieldSkill : BaseSkill
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Range(1,3)]
+    public int shields;
 
-    // Update is called once per frame
-    void Update()
+    public override void UseSkill()
     {
-        
+        base.UseSkill();
+
     }
 }

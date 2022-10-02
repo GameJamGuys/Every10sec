@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerLogic : MonoBehaviour
+public class PlayerLogic : StaticInstance<PlayerLogic>
 {
+    public GameObject shield;
+    [HideInInspector]
+    public int shieldCount;
+
     int bossPower;
 
     void Start()
@@ -15,6 +19,16 @@ public class PlayerLogic : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ShieldUp()
+    {
+
+    }
+
+    public void ShieldDown()
+    {
+
     }
 
     public void RecieveAttack(BossAttackType type)

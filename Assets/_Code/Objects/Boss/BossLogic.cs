@@ -34,11 +34,15 @@ public class BossLogic : StaticInstance<BossLogic>
         {
             case 1:
                 anim.SetTrigger("LAttack");
+                PlayerLogic.Instance.RecieveAttack(BossAttackType.Left);
                 break;
             case 2:
                 anim.SetTrigger("RAttack");
+                PlayerLogic.Instance.RecieveAttack(BossAttackType.Right);
                 break;
             case 3:
+                anim.SetTrigger("BAttack");
+                PlayerLogic.Instance.RecieveAttack(BossAttackType.Both);
                 break;
             default:
                 break;
