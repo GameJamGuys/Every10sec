@@ -18,14 +18,14 @@ public class SlotManager : StaticInstance<SlotManager>
 
     public void ResetSlots()
     {
+        slotSuits = new List<CardSuit>();
+        
         for (int i = 0; i < 3; i++)
         {
-            slotSuits.RemoveAt(0);
             int random = Random.Range(0, 4);
             CardSuit newSuit = (CardSuit)random;
             slotSuits.Add(newSuit);
         }
-
 
         SetSlots();
     }
@@ -47,7 +47,6 @@ public class SlotManager : StaticInstance<SlotManager>
                         return;
                     }
                 }
-
                 return;
             }
         }
@@ -60,6 +59,7 @@ public class SlotManager : StaticInstance<SlotManager>
 
     public void SetSlots()
     {
+        conditions = 3;
         StartCoroutine(SetDelay());
     }
 
@@ -72,7 +72,6 @@ public class SlotManager : StaticInstance<SlotManager>
             yield return new WaitForSeconds(0.1f);
         }
         tempSuits = slotSuits;
-        conditions = 3;
     }
 
 }

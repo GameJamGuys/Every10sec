@@ -14,6 +14,12 @@ public class CardHolder : MonoBehaviour
         canvas = GetComponentInParent<Canvas>();
     }
 
+    public void ResetHand()
+    {
+        transform.DestroyChildren();
+        FillHand();
+    }
+
     public void FillHand()
     {
         StartCoroutine(DrawCards());

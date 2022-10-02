@@ -8,7 +8,7 @@ public class DropArea : MonoBehaviour, IDropHandler
     //public DragDrop card;
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("Drop");
+        //Debug.Log("Drop");
         if (eventData.pointerDrag != null)
         {
             BattleCard card = eventData.pointerDrag.GetComponent<BattleCard>();

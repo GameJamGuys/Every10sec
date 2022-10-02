@@ -27,12 +27,14 @@ public class PlayerLogic : StaticInstance<PlayerLogic>
 
     public void ShieldUp()
     {
+        Debug.Log("Shield up");
         shield.SetActive(true);
         shieldCount = 1;
     }
 
     public void ShieldDown()
     {
+        Debug.Log("Shield down");
         shield.SetActive(false);
         shieldCount = 0;
     }
@@ -48,6 +50,7 @@ public class PlayerLogic : StaticInstance<PlayerLogic>
     {
         if(shieldCount > 0)
         {
+            Debug.Log("Shield used");
             ShieldDown();
             return;
         }

@@ -19,12 +19,15 @@ public class SlotWheel : MonoBehaviour
 
     public void Deactive() => image.color = disColor;
 
-    public void SetSuit(CardSuit suit) => StartCoroutine(WaitAndSet(suit));
-
-    IEnumerator WaitAndSet(CardSuit suit)
+    public void SetSuit(CardSuit suit)
     {
         image.color = Color.white;
         anim.SetTrigger("Roll");
+        StartCoroutine(WaitAndSet(suit));
+    }
+
+    IEnumerator WaitAndSet(CardSuit suit)
+    {
         slot = GetComponentInChildren<SlotSuit>();
         yield return new WaitForSeconds(0.25f);
         Debug.Log($"Set {suit}");
