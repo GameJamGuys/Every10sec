@@ -6,11 +6,11 @@ public class BaseSkill : MonoBehaviour
 {
     public SkillType skillType;
 
-    [Range(0, 100)]
+    [Range(-10, 10)]
     public int hp;
-    [Range(0, 5)]
+    [Range(-3, 3)]
     public int mp;
-    [Range(0, 5)]
+    [Range(-3, 3)]
     public int sp;
 
     private void Start()
@@ -25,7 +25,7 @@ public class BaseSkill : MonoBehaviour
 
     public virtual void UseSkill()
     {
-        PlayerManager.Instance.AddStats(hp, mp, sp);
+        PlayerManager.Instance.AddStats(hp * 10, mp, sp);
     }
 
 }
