@@ -6,12 +6,8 @@ public class CardSkill : MonoBehaviour
 {
     public SkillType skillType;
     public GameObject[] skillItems;
+    public BaseSkill skill;
     //public BaseSkill[] skills;
-
-    void Start()
-    {
-        
-    }
 
     public void SetSkill(SkillType type)
     {
@@ -27,17 +23,13 @@ public class CardSkill : MonoBehaviour
         transform.DeactiveChildren();
         int random = Random.Range(0, skillItems.Length);
         skillItems[random].SetActive(true);
+        skill = skillItems[random].GetComponent<BaseSkill>();
     }
 }
 
 public enum SkillType
 {
     Attack,
-    SwordAttack,
-    ThunderBolt,
-    FireBall,
     Shield,
     Heal,
-    AddMana,
-    AddStamina
 }

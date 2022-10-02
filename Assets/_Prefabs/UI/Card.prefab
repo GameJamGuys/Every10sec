@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2514893004517968117}
   - component: {fileID: 6313183614402631697}
   - component: {fileID: 7329098036929051830}
+  - component: {fileID: 7647746485776959527}
   m_Layer: 0
   m_Name: Image.3
   m_TagString: Untagged
@@ -76,6 +77,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7647746485776959527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023984081834022371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ce7942b41ee4416819baa2518d350e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillType: 0
+  hp: 0
+  mp: 1
+  sp: 0
+  attackAmount: 30
 --- !u!1 &1793496857949003133
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,6 +181,7 @@ GameObject:
   - component: {fileID: 1061513588125882130}
   - component: {fileID: 3075624555175426215}
   - component: {fileID: 385909831931205516}
+  - component: {fileID: 582056592925642596}
   m_Layer: 0
   m_Name: Image.1
   m_TagString: Untagged
@@ -228,6 +247,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &582056592925642596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5517967529718068053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ce7942b41ee4416819baa2518d350e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillType: 0
+  hp: 0
+  mp: 1
+  sp: 0
+  attackAmount: 20
 --- !u!1 &7110159784880348058
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +399,7 @@ GameObject:
   - component: {fileID: 6554414925320411520}
   - component: {fileID: 2259932835052375607}
   - component: {fileID: 7792450554871774627}
+  - component: {fileID: 6938490654136581847}
   m_Layer: 0
   m_Name: Image.2
   m_TagString: Untagged
@@ -428,6 +465,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6938490654136581847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7446085948779387590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ce7942b41ee4416819baa2518d350e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillType: 0
+  hp: 0
+  mp: 0
+  sp: 1
+  attackAmount: 20
 --- !u!1 &8800512910098508792
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +541,7 @@ MonoBehaviour:
   - {fileID: 5517967529718068053}
   - {fileID: 7446085948779387590}
   - {fileID: 1023984081834022371}
+  skill: {fileID: 0}
 --- !u!1001 &1521528931366661689
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class DropArea : MonoBehaviour, IDropHandler
         Debug.Log("Drop");
         if (eventData.pointerDrag != null)
         {
-            eventData.pointerDrag.GetComponent<DragDrop>().DeleteCard();
+            eventData.pointerDrag.GetComponent<DragDrop>().UseCard();
             //card.DeleteCard();
         }
     }

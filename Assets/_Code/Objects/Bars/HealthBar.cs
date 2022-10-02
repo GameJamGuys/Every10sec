@@ -8,7 +8,6 @@ public class HealthBar : MonoBehaviour
     public int maxHealth;
 
     public Image fillImage;
-    // Start is called before the first frame update
 
     public void Set(int setAmount)
     {
@@ -19,9 +18,4 @@ public class HealthBar : MonoBehaviour
         fillImage.fillAmount = newFillAmount;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

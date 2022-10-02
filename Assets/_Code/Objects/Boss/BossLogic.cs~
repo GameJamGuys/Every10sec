@@ -1,0 +1,38 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BossLogic : StaticInstance<BossLogic>
+{
+    public HealthBar health;
+    Animator anim;
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
+
+    void Update()
+    {
+        
+    }
+
+    public void Attack()
+    {
+        int attackType = Random.Range(1, 4);
+        Debug.Log($"Attack type {attackType}");
+        switch (attackType)
+        {
+            case 1:
+                anim.SetTrigger("LAttack");
+                break;
+            case 2:
+                anim.SetTrigger("RAttack");
+                break;
+            case 3:
+                break;
+            default:
+                break;
+        }
+    }
+}

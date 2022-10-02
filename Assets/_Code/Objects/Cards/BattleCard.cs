@@ -14,10 +14,15 @@ public class BattleCard : MonoBehaviour
         RandomSet();
     }
 
+    public void UseCard()
+    {
+        cardSkill.skill.UseSkill();
+        Destroy(gameObject);
+    }
+
     public void RandomSet()
     {
         cardSkill.RandomSkill();
-        
     }
 
     public void SetRandomSuit()

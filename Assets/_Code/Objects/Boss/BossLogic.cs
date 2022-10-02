@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BossLogic : StaticInstance<BossLogic>
 {
+    public HealthBar health;
     Animator anim;
 
     void Start()
@@ -11,9 +12,9 @@ public class BossLogic : StaticInstance<BossLogic>
         anim = GetComponent<Animator>();
     }
 
-    void Update()
+    public void ChangeHP(int amount)
     {
-        
+        health.Set(amount);
     }
 
     public void Attack()
