@@ -16,8 +16,7 @@ public class CardHolder : MonoBehaviour
 
     public void ResetHand()
     {
-        transform.DestroyChildren();
-        FillHand();
+        StartCoroutine(RemoveByOne());
     }
 
     IEnumerator RemoveByOne()
