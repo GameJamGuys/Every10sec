@@ -20,6 +20,17 @@ public class CardHolder : MonoBehaviour
         FillHand();
     }
 
+    IEnumerator RemoveByOne()
+    {
+        AudioSystem.Instance.PlaySound("ResetCards");
+        while (transform.childCount > 0)
+        {
+            Destroy(transform.GetChild(0));
+            yield return new WaitForSeconds(0.02f);
+        }
+        FillHand();
+    }
+
     public void FillHand()
     {
         StartCoroutine(DrawCards());
@@ -30,6 +41,7 @@ public class CardHolder : MonoBehaviour
         while (transform.childCount != 5)
         {
             yield return new WaitForSeconds(0.2f);
+            AudioSystem.Instance.PlaySound("TakeCard");
             Instantiate(cardPrefab, transform);
         }
     }
