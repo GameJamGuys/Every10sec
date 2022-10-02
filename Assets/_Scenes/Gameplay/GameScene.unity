@@ -1277,7 +1277,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &945289886
 Transform:
   m_ObjectHideFlags: 0
@@ -1607,7 +1607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b773a04383c4eab9f2bb336a7b2e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotSuits: 010000000300000001000000
+  slotSuits: 010000000300000002000000
   slots:
   - {fileID: 1641661336}
   - {fileID: 2011398206}
@@ -4047,6 +4047,42 @@ PrefabInstance:
     - target: {fileID: 4343869501573376459, guid: 1f25b9f0c95ff4b43b3c227ee1846621, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5650544751758375738, guid: 1f25b9f0c95ff4b43b3c227ee1846621, type: 3}
+      propertyPath: disColor.b
+      value: 0.6132076
+      objectReference: {fileID: 0}
+    - target: {fileID: 5650544751758375738, guid: 1f25b9f0c95ff4b43b3c227ee1846621, type: 3}
+      propertyPath: disColor.g
+      value: 0.6132076
+      objectReference: {fileID: 0}
+    - target: {fileID: 5650544751758375738, guid: 1f25b9f0c95ff4b43b3c227ee1846621, type: 3}
+      propertyPath: disColor.r
+      value: 0.6132076
+      objectReference: {fileID: 0}
+    - target: {fileID: 5650544752453430679, guid: 1f25b9f0c95ff4b43b3c227ee1846621, type: 3}
+      propertyPath: disColor.b
+      value: 0.6132076
+      objectReference: {fileID: 0}
+    - target: {fileID: 5650544752453430679, guid: 1f25b9f0c95ff4b43b3c227ee1846621, type: 3}
+      propertyPath: disColor.g
+      value: 0.6132076
+      objectReference: {fileID: 0}
+    - target: {fileID: 5650544752453430679, guid: 1f25b9f0c95ff4b43b3c227ee1846621, type: 3}
+      propertyPath: disColor.r
+      value: 0.6132076
+      objectReference: {fileID: 0}
+    - target: {fileID: 5650544753056713632, guid: 1f25b9f0c95ff4b43b3c227ee1846621, type: 3}
+      propertyPath: disColor.b
+      value: 0.6132076
+      objectReference: {fileID: 0}
+    - target: {fileID: 5650544753056713632, guid: 1f25b9f0c95ff4b43b3c227ee1846621, type: 3}
+      propertyPath: disColor.g
+      value: 0.6132076
+      objectReference: {fileID: 0}
+    - target: {fileID: 5650544753056713632, guid: 1f25b9f0c95ff4b43b3c227ee1846621, type: 3}
+      propertyPath: disColor.r
+      value: 0.6132076
       objectReference: {fileID: 0}
     - target: {fileID: 6611422299797064318, guid: 1f25b9f0c95ff4b43b3c227ee1846621, type: 3}
       propertyPath: m_SizeDelta.y

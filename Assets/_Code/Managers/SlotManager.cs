@@ -26,7 +26,6 @@ public class SlotManager : StaticInstance<SlotManager>
             slotSuits.Add(newSuit);
         }
 
-
         SetSlots();
     }
 
@@ -60,6 +59,7 @@ public class SlotManager : StaticInstance<SlotManager>
 
     public void SetSlots()
     {
+        conditions = 3;
         StartCoroutine(SetDelay());
     }
 
@@ -72,7 +72,6 @@ public class SlotManager : StaticInstance<SlotManager>
             yield return new WaitForSeconds(0.1f);
         }
         tempSuits = slotSuits;
-        conditions = 3;
     }
 
 }

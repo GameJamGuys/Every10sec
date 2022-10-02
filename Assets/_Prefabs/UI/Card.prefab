@@ -353,7 +353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2621934811295297863}
-  - component: {fileID: 5427425344595238515}
+  - component: {fileID: 3986600462296659324}
   - component: {fileID: 7927138400793700462}
   - component: {fileID: 7716810438576204706}
   m_Layer: 0
@@ -386,7 +386,7 @@ RectTransform:
   m_AnchoredPosition: {x: 5.7, y: 5.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5427425344595238515
+--- !u!114 &3986600462296659324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -395,14 +395,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1201368593616310489}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e75292cdb32574fb0af311a15e5697ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 88cfdf8a38f494cc2b96ef808ca3b2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillType: 1
+  skillType: 0
   hp: 0
   mp: -1
   sp: 1
-  shields: 0
 --- !u!222 &7927138400793700462
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2200,7 +2199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5021547489679192365}
-  - component: {fileID: 194525250062799119}
+  - component: {fileID: 1579919423049278212}
   - component: {fileID: 7554151542543709347}
   - component: {fileID: 8240752217223360791}
   m_Layer: 0
@@ -2233,7 +2232,7 @@ RectTransform:
   m_AnchoredPosition: {x: 5.7, y: 5.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &194525250062799119
+--- !u!114 &1579919423049278212
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2242,14 +2241,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5007402513518681338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e75292cdb32574fb0af311a15e5697ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 88cfdf8a38f494cc2b96ef808ca3b2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillType: 1
+  skillType: 0
   hp: 0
   mp: 1
   sp: -1
-  shields: 0
 --- !u!222 &7554151542543709347
 CanvasRenderer:
   m_ObjectHideFlags: 0
