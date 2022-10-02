@@ -38,7 +38,7 @@ public class CardHolder : MonoBehaviour
 
     IEnumerator DrawCards()
     {
-        while (transform.childCount != 5)
+        while (transform.childCount < 5)
         {
             yield return new WaitForSeconds(0.2f);
             Debug.Log("Card draw");
