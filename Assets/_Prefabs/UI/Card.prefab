@@ -2262,8 +2262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillType: 0
-  hp: 0
-  mp: -1
+  hp: -2
+  mp: 1
   sp: 1
 --- !u!222 &3054570220458904304
 CanvasRenderer:
@@ -3863,7 +3863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillType: 0
   hp: 0
-  mp: -2
+  mp: 0
   sp: 0
   attackAmount: 30
 --- !u!222 &1759539233338320361
