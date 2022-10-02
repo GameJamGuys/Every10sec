@@ -1996,7 +1996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1076780728165647643, guid: 8f31dee1d6065994aa836626677774e2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1076780728829287821, guid: 8f31dee1d6065994aa836626677774e2, type: 3}
       propertyPath: m_IsActive
@@ -2109,7 +2109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43d72a1ed0454d5ead9f9a0b4179de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossHealth: 100
+  bossHealth: 300
   bossAttack: 15
   health: {fileID: 1668417102}
 --- !u!95 &668176125
@@ -3021,7 +3021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2070a177c0934f898630c46466518ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHP: 100
+  playerHP: 150
   playerMP: 5
   playerSP: 5
   healthBar: {fileID: 1167478101}
