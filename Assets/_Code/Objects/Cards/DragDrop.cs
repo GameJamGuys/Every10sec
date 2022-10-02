@@ -11,12 +11,10 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     private Vector2 originalPos;
-    private RectTransform cardRect;
     
 
     public void Awake()
     {
-        cardRect = GetComponent<RectTransform>();
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
     }

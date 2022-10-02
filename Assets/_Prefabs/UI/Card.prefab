@@ -94,7 +94,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8394049587070133615
 RectTransform:
   m_ObjectHideFlags: 0
@@ -127,6 +127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c06ab7b153b12488b9a8e3cee61853fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillType: 0
+  hp: 0
+  mp: 0
+  sp: 0
 --- !u!222 &5611874269773765156
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3989,7 +3993,7 @@ GameObject:
   - component: {fileID: 2327667870207579456}
   - component: {fileID: 3153825072838822122}
   - component: {fileID: 4588038387258784578}
-  - component: {fileID: -4533385961317201253}
+  - component: {fileID: 1508357029992613795}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -4087,7 +4091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d3f91fa3d70724abea73e08454a784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!225 &-4533385961317201253
+--- !u!225 &1508357029992613795
 CanvasGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
