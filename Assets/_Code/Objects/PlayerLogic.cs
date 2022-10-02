@@ -27,23 +27,30 @@ public class PlayerLogic : StaticInstance<PlayerLogic>
 
     public void ShieldUp()
     {
-
+        shield.SetActive(true);
+        shieldCount = 1;
     }
 
     public void ShieldDown()
     {
-
+        shield.SetActive(false);
+        shieldCount = 0;
     }
 
     IEnumerator Blink(GameObject cut)
     {
         cut.SetActive(true);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         cut.SetActive(false);
     }
 
     public void RecieveAttack(BossAttackType type)
     {
+        if(shieldCount > 0)
+        {
+            ShieldDown();
+            return;
+        }
         switch (type)
         {
             case BossAttackType.Left:
