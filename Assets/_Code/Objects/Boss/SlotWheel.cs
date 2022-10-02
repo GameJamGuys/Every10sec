@@ -29,7 +29,7 @@ public class SlotWheel : MonoBehaviour
     IEnumerator WaitAndSet(CardSuit suit)
     {
         slot = GetComponentInChildren<SlotSuit>();
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.2f);
         Debug.Log($"Set {suit}");
         slot.SetSuit(suit);
         slotSuit = suit;
