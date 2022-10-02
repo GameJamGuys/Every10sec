@@ -9,15 +9,36 @@ public class ResetHand : MonoBehaviour
     public CardHolder holder;
     Button button;
 
+    bool canReset;
+    float timer;
+
     void Start()
     {
         button = GetComponent<Button>();
         button.onClick.AddListener(Reset);
+        timer = 0;
+        canReset = true;
+    }
+
+    private void Update()
+    {
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+        }
+        else if (!canReset) canReset = true;
+
+
     }
 
     private void Reset()
     {
-        PlayerManager.Instance.AddHp(-healthCost);
-        holder.ResetHand();
+        if (canReset)
+        {
+            PlayerManager.Instance.AddHp(-healthCost);
+            holder.ResetHand();
+            timer = 1f;
+            canReset = false;
+        }
     }
 }
