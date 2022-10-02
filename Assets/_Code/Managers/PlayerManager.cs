@@ -49,6 +49,7 @@ public class PlayerManager : StaticInstance<PlayerManager>
         {
             case StatType.Health:
                 playerHP += amount;
+                if (playerHP <= 0) GameOverManager.Instance.ShowLose();
                 if (playerHP > Player.maxHp)
                     playerHP = Player.maxHp;
                 Player.health = playerHP;

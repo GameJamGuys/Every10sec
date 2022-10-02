@@ -18,6 +18,7 @@ public class TimeManager : MonoBehaviour
 
     IEnumerator LaunchTimer()
     {
+        AudioSystem.Instance.PlaySound("Timer");
         timerTime = fixTime;
         timer.SetTime(timerTime);
         while (timerTime > 0)

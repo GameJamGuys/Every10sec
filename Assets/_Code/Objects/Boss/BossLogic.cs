@@ -20,6 +20,8 @@ public class BossLogic : StaticInstance<BossLogic>
         if (PlayerLogic.Instance.curse) amount = amount / 2;
         bossHealth = Mathf.Clamp(bossHealth - amount, 0, health.maxHealth);
         ChangeHP(bossHealth);
+        if (bossHealth == 0) GameOverManager.Instance.ShowWin();
+
     }
 
     public void ChangeHP(int amount)

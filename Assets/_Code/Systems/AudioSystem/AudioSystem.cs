@@ -79,6 +79,7 @@ public class AudioSystem : StaticInstance<AudioSystem>
 
     public void PlaySound(string name)
     {
+        Debug.Log($"Play {name}");
         Sound soundToPlay = FindSound(name);
         if (soundToPlay == null) return;
         PlaySound(soundToPlay);
