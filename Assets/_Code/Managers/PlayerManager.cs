@@ -96,4 +96,13 @@ public static class Player
     public static int maxMp;
     public static int stamina;
     public static int maxSp;
+
+    public static bool Check(int hp, int mp, int sp)
+    {
+        if (health < -hp) return false;
+        if (mana < -mp) return false;
+        if (stamina < -sp) return false;
+
+        return true;
+    }
 }

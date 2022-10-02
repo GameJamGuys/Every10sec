@@ -14,6 +14,8 @@ public class BattleCard : MonoBehaviour
         RandomSet();
     }
 
+    public bool CanUse() => cardSkill.skill.CanUse();
+
     public void UseCard()
     {
         cardSkill.skill.UseSkill();

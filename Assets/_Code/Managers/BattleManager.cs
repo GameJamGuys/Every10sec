@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class BattleManager : StaticInstance<BattleManager>
 {
-
-    // Start is called before the first frame update
+    public CardHolder cardHolder;
+    
     void Start()
     {
-        
+        DrawCards();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+    public void DrawCards() => cardHolder.FillHand();
 
     public void PlayerAttack(int amount) => BossLogic.Instance.PlayerAttack(amount);
 

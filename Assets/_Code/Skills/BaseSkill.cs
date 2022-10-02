@@ -13,19 +13,11 @@ public class BaseSkill : MonoBehaviour
     [Range(-3, 3)]
     public int sp;
 
-    private void Start()
-    {
-        transform.DeactiveChildren();
-    }
-
-    public void SetUp()
-    {
-        transform.ActiveChildren();
-    }
-
     public virtual void UseSkill()
     {
         PlayerManager.Instance.AddStats(hp * 10, mp, sp);
     }
+
+    public bool CanUse() => Player.Check(hp, mp, sp);
 
 }

@@ -14,10 +14,16 @@ public class CardHolder : MonoBehaviour
         canvas = GetComponentInParent<Canvas>();
     }
 
-    public void AddCards()
+    public void FillHand()
+    {
+        StartCoroutine(DrawCards());
+    }
+
+    IEnumerator DrawCards()
     {
         while (transform.childCount != 5)
         {
+            yield return new WaitForSeconds(0.2f);
             Instantiate(cardPrefab, transform);
         }
     }

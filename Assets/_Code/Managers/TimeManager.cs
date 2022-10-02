@@ -35,6 +35,7 @@ public class TimeManager : MonoBehaviour
     void TimeOut()
     {
         BattleManager.Instance.BossTryAttack();
+        BattleManager.Instance.DrawCards();
         SlotManager.Instance.ResetSlots();
     }
 
