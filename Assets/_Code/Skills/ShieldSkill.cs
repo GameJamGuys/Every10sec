@@ -10,6 +10,6 @@ public class ShieldSkill : BaseSkill
     public override void UseSkill()
     {
         base.UseSkill();
-
+        PlayerLogic.Instance.ShieldUp();
     }
 }
