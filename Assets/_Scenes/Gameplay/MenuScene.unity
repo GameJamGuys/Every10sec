@@ -350,7 +350,12 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1129356801
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6744705110691035645, guid: 428550d48d0b94173a6ea3656c34704a, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7197532167637915407, guid: 428550d48d0b94173a6ea3656c34704a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 428550d48d0b94173a6ea3656c34704a, type: 3}
 --- !u!114 &980391892 stripped
 MonoBehaviour:
@@ -401,7 +406,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 10.57, y: -210}
-  m_SizeDelta: {x: 609.33, y: 135.09}
+  m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &991314455
 MonoBehaviour:
@@ -479,7 +484,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -1856686045, guid: e8979e56ea270ad4bb92358d93e0f84e, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -488,7 +493,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.3
 --- !u!222 &991314457
 CanvasRenderer:
   m_ObjectHideFlags: 0
