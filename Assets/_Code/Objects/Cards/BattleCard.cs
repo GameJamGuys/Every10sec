@@ -19,7 +19,7 @@ public class BattleCard : MonoBehaviour
     public void UseCard()
     {
         cardSkill.skill.UseSkill();
-        SlotManager.Instance.CheckSuit(suit);
+        BattleManager.Instance.extra = SlotManager.Instance.CheckSuit(suit);
         Destroy(gameObject);
     }
 

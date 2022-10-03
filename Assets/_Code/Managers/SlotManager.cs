@@ -30,7 +30,7 @@ public class SlotManager : StaticInstance<SlotManager>
         SetSlots();
     }
 
-    public void CheckSuit(CardSuit suit)
+    public bool CheckSuit(CardSuit suit)
     {
         foreach(CardSuit temp in slotSuits)
         {
@@ -44,12 +44,13 @@ public class SlotManager : StaticInstance<SlotManager>
                     if(slot.slotSuit == suit)
                     {
                         slot.Deactive();
-                        return;
+                        return true;
                     }
                 }
-                return;
             }
         }
+
+        return false;
     }
 
     public bool IsAllGood()
