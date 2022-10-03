@@ -5,7 +5,7 @@ using UnityEngine;
 public class SlotManager : StaticInstance<SlotManager>
 {
     public List<CardSuit> slotSuits;
-    List<CardSuit> tempSuits;
+    CardSuit[] tempSuits;
 
     public SlotWheel[] slots;
 
@@ -26,17 +26,17 @@ public class SlotManager : StaticInstance<SlotManager>
             CardSuit newSuit = (CardSuit)random;
             slotSuits.Add(newSuit);
         }
-
+        
         SetSlots();
     }
 
     public void CheckSuit(CardSuit suit)
     {
-        foreach(CardSuit temp in tempSuits)
+        foreach(CardSuit temp in slotSuits)
         {
             if(temp == suit)
             {
-                tempSuits.Remove(temp);
+                slotSuits.Remove(temp);
                 conditions--;
 
                 foreach(SlotWheel slot in slots)
@@ -60,18 +60,17 @@ public class SlotManager : StaticInstance<SlotManager>
     public void SetSlots()
     {
         conditions = 3;
+        tempSuits = slotSuits.ToArray();
         StartCoroutine(SetDelay());
     }
 
     IEnumerator SetDelay()
     {
-        foreach (CardSuit suit in slotSuits)
+        for(int i = 0; i < 3; i++)
         {
-            int index = slotSuits.IndexOf(suit);
-            slots[index].SetSuit(suit);
+            slots[i].SetSuit(tempSuits[i]);
             yield return new WaitForSeconds(0.05f);
         }
-        tempSuits = slotSuits;
     }
 
 }

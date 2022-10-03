@@ -22,14 +22,16 @@ public class SlotWheel : MonoBehaviour
     public void SetSuit(CardSuit suit)
     {
         image.color = Color.white;
+        Debug.Log(image.color);
         anim.SetTrigger("Roll");
+        Debug.Log("Roll");
         StartCoroutine(WaitAndSet(suit));
     }
 
     IEnumerator WaitAndSet(CardSuit suit)
     {
         slot = GetComponentInChildren<SlotSuit>();
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.05f);
         Debug.Log($"Set {suit}");
         slot.SetSuit(suit);
         slotSuit = suit;

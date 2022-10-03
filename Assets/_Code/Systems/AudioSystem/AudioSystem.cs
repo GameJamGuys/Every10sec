@@ -39,7 +39,7 @@ public class AudioSystem : StaticInstance<AudioSystem>
         s.source = gameObject.AddComponent<AudioSource>();
         s.source.clip = s.clip;
 
-        s.source.volume = volume;
+        s.source.volume = 1f;
         s.source.pitch = s.pitch;
         s.source.loop = s.loop;
 
@@ -79,7 +79,7 @@ public class AudioSystem : StaticInstance<AudioSystem>
 
     public void PlaySound(string name)
     {
-        Debug.Log($"Play {name}");
+        //Debug.Log($"Play sound {name}");
         Sound soundToPlay = FindSound(name);
         if (soundToPlay == null) return;
         PlaySound(soundToPlay);

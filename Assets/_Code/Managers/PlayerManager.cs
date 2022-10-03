@@ -43,13 +43,19 @@ public class PlayerManager : StaticInstance<PlayerManager>
     public void AddMp(int mp) => ChangeStat(StatType.Mana, mp);
     public void AddSp(int sp) => ChangeStat(StatType.Stamina, sp);
 
+    IEnumerator GameOver()
+    {
+        yield return new WaitForSeconds(0.5f);
+        GameOverManager.Instance.ShowLose();
+    }
+
     public void ChangeStat(StatType type, int amount)
     {
         switch (type)
         {
             case StatType.Health:
                 playerHP += amount;
-                if (playerHP <= 0) GameOverManager.Instance.ShowLose();
+                if (playerHP <= 0) StartCoroutine(GameOver());
                 if (playerHP > Player.maxHp)
                     playerHP = Player.maxHp;
                 Player.health = playerHP;
